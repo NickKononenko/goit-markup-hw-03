@@ -1,0 +1,256 @@
+/* Палітра кольорів 
+Колір основного тексту #2e2f42 (Navy Blue)
+Колір другорядного тексту background: #434455;(Slate)
+Білий колір #FFFFFF;
+Клауд колір #F4F4FD;
+Фіолетовий: #4D5AE5;
+Фіолетовий при наведенні на кнопку background: #404BBF;
+*/
+
+:root {
+  --primary-text-color: #2e2f42;
+  --seconadry-text-color: #434455;
+  --text-color-white: #FFFFFF;
+  --text-color-cloud: #F4F4FD;
+  --text-color-iris: #4D5AE5;
+  --text-color-ocean:#404BBF;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-text-color);
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Header */
+
+.navbar .list {
+  list-style: none;
+}
+
+.logo {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+.logo .logo-web {
+  color: var(--text-color-iris);
+}
+
+.list-item .link:hover,
+.list-item .link:focus {
+color: var(--text-color-ocean);
+}
+
+.navbar .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.contacts {
+  list-style: none;
+}
+
+.contacts .link {
+  color: var(--seconadry-text-color);
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--text-color-ocean);
+}
+
+/* Footer */
+
+.site-footer {
+  background-color: var(--primary-text-color);
+}
+
+.site-footer .logo-web {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--text-color-iris);
+}
+
+.site-footer .logo {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--text-color-cloud);
+}
+
+.site-footer p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-color-cloud);
+}
+
+/* Main page */
+
+/* Hero */
+
+.hero {
+  background-color: var(--primary-text-color);
+  /* Доданий для того, щоб було видно hero title */
+}
+.hero-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: var(--text-color-white);
+}
+.hero-button {
+  color: var(--text-color-white);
+  background-color: var(--text-color-iris);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--text-color-ocean);
+}
+
+
+/* Our values */
+
+.our-values-section h2 {
+  display: none;
+}
+
+.our-values-section ul {
+  list-style: none;
+}
+
+.our-values-section h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.our-values-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--seconadry-text-color);
+}
+/* What are we doing */
+
+.our-job-section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.our-job-section ul {
+  list-style: none;
+}
+
+/* Our team */
+
+.our-team-section {
+  background-color: var(--text-color-cloud);
+}
+
+.our-team-section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.our-team-section ul {
+  list-style: none;
+}
+
+.our-team-section h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.our-team-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--seconadry-text-color);
+}
+
+/* Portfolio page */
+
+.portfolio-header {
+  display: none;
+}
+
+/* Filter */
+
+.filter {
+  list-style: none;
+}
+
+.filter .button {
+  color: var(--text-color-iris);
+  background-color: var(--text-color-cloud);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.5;
+  cursor: pointer;
+
+}
+
+.filter .button:hover,
+.filter .button:focus {
+  color: var(--text-color-white);
+  background-color: var(--text-color-ocean);
+}
+
+/* Portfolio items */
+
+.portfolio-items {
+  list-style: none;
+}
+
+.portfolio-items h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.portfolio-items p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--seconadry-text-color);
+}
