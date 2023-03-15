@@ -10,10 +10,10 @@
 :root {
   --primary-text-color: #2e2f42;
   --seconadry-text-color: #434455;
-  --text-color-white: #FFFFFF;
-  --text-color-cloud: #F4F4FD;
-  --text-color-iris: #4D5AE5;
-  --text-color-ocean:#404BBF;
+  --text-color-white: #ffffff;
+  --text-color-cloud: #f4f4fd;
+  --text-color-iris: #4d5ae5;
+  --text-color-ocean: #404bbf;
 }
 
 body {
@@ -25,13 +25,61 @@ body {
   text-decoration: none;
 }
 
-/* Header */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-.navbar .list {
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+ul {
   list-style: none;
 }
 
+.section {
+  padding: 120px 0;
+}
+
+img {
+  display: block;
+}
+/* Зробив це для того, щоб не було проміжку між фото і рамкою в кардсеті портфолі, але не знаю чи це правильно і чи не нашкодить в майбутньому */
+
+/* Header */
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.container.header {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .list {
+  display: flex;
+  gap: 40px;
+}
+
 .logo {
+  display: block;
   font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
@@ -40,6 +88,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--primary-text-color);
+  margin-right: 76px;
 }
 .logo .logo-web {
   color: var(--text-color-iris);
@@ -47,23 +96,29 @@ body {
 
 .list-item .link:hover,
 .list-item .link:focus {
-color: var(--text-color-ocean);
+  color: var(--text-color-ocean);
 }
 
 .navbar .link {
+  display: block;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
 }
 
 .contacts {
-  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
 }
 
 .contacts .link {
+  display: block;
   color: var(--seconadry-text-color);
+  padding: 24px 0;
 }
 
 .contacts .link:hover,
@@ -75,6 +130,18 @@ color: var(--text-color-ocean);
 
 .site-footer {
   background-color: var(--primary-text-color);
+}
+
+.footer-container {
+  padding: 100px 0;
+}
+
+.footer-content {
+  width: 264px;
+}
+
+.footer-content .logo {
+  margin-bottom: 16px;
 }
 
 .site-footer .logo-web {
@@ -106,10 +173,18 @@ color: var(--text-color-ocean);
 
 /* Hero */
 
-.hero {
+.hero-section {
   background-color: var(--primary-text-color);
   /* Доданий для того, щоб було видно hero title */
 }
+
+.container.hero {
+  /* Чому при height - висота 900 пікселів, а при max-height - висота правильна?? */
+  max-height: 600px;
+  text-align: center;
+  padding: 188px 0;
+}
+
 .hero-title {
   text-align: center;
   font-weight: 700;
@@ -117,6 +192,7 @@ color: var(--text-color-ocean);
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--text-color-white);
+  margin-bottom: 48px;
 }
 .hero-button {
   color: var(--text-color-white);
@@ -126,6 +202,10 @@ color: var(--text-color-ocean);
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 16px 32px;
+  border: none;
 }
 
 .hero-button:hover,
@@ -133,15 +213,28 @@ color: var(--text-color-ocean);
   background-color: var(--text-color-ocean);
 }
 
-
 /* Our values */
 
-.our-values-section h2 {
-  display: none;
+.our-values-section {
+  padding-bottom: 0;
 }
 
-.our-values-section ul {
-  list-style: none;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.our-values-list {
+  display: flex;
+  gap: 24px;
 }
 
 .our-values-section h3 {
@@ -158,6 +251,15 @@ color: var(--text-color-ocean);
 }
 /* What are we doing */
 
+.our-job-header {
+  margin-bottom: 72px;
+}
+
+.our-job-list {
+  display: flex;
+  gap: 24px;
+}
+
 .our-job-section h2 {
   text-align: center;
   font-weight: 700;
@@ -167,27 +269,25 @@ color: var(--text-color-ocean);
   text-transform: capitalize;
 }
 
-.our-job-section ul {
-  list-style: none;
-}
-
 /* Our team */
 
 .our-team-section {
   background-color: var(--text-color-cloud);
 }
 
-.our-team-section h2 {
+.our-team-header {
   text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
-.our-team-section ul {
-  list-style: none;
+.our-team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .our-team-section h3 {
@@ -207,6 +307,11 @@ color: var(--text-color-ocean);
 
 /* Portfolio page */
 
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 .portfolio-header {
   display: none;
 }
@@ -214,7 +319,10 @@ color: var(--text-color-ocean);
 /* Filter */
 
 .filter {
-  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
 }
 
 .filter .button {
@@ -225,7 +333,11 @@ color: var(--text-color-ocean);
   font-family: inherit;
   line-height: 1.5;
   cursor: pointer;
-
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter .button:hover,
@@ -236,11 +348,25 @@ color: var(--text-color-ocean);
 
 /* Portfolio items */
 
-.portfolio-items {
-  list-style: none;
+.portfolio-card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
 }
 
-.portfolio-items h2 {
+/* .portfolio-card-set > .item { 
+}
+*/
+
+.card-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border: 1px solid #e7e9fc;
+  border-top: 0;
+}
+
+.portfolio-card-set h2 {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -248,7 +374,7 @@ color: var(--text-color-ocean);
   color: var(--primary-text-color);
 }
 
-.portfolio-items p {
+.portfolio-card-set p {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
