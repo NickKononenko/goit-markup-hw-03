@@ -240,6 +240,10 @@ img {
   gap: 24px;
 }
 
+.strategy {
+  width: calc((100% - 72px) / 4);
+}
+
 .our-values-section h3 {
   font-weight: 500;
   font-size: 20px;
